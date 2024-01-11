@@ -1,41 +1,74 @@
-[![DOI](https://zenodo.org/badge/265254045.svg)](https://zenodo.org/doi/10.5281/zenodo.10442485)
+_your zenodo badge here_
 
-# metarepo
-Template repository for a single point of access meta-repository to reproduce an experiment
+# mcmanamay_etal_2024_natcom
 
-## Purpose
-A meta-repository creates a single point of access for someone to find all of the components that were used to create a published work for the purpose of reproducibility.  This repository should contain references to all minted data and software as well as house any ancillary code used to transform the source data, create figures for your publication, conduct the experiment, and / or execute the contributing software.
+**Dynamic urban land 1 extensification is projected to lead to imbalances in the global land-carbon equilibrium**
 
-## Using the template
-Simply click `Use this template` on the main repository page (shows up to the left of `Clone or download`) and fill in your `Repository name`, the `Description`, select whether you want the repository to be `Public` or `Private`, and leave `Include all branches` unchecked.
+Ryan A. McManamay<sup>1\*</sup>, Chris R. Vernon<sup>2</sup>, Min Chen<sup>3</sup>, Isaac Thompson<sup>2</sup>, Zarrar Khan<sup>2</sup>, Kanishka B. Narayan<sup>2</sup>
 
-## Naming your meta-repository
-The following naming conventions should be used when naming your repository:  
-- Single author:  `lastname_year_journal`
-- Multi author:  `lastname-etal_year_journal`
-- Multiple publications in the same journal:  `lastname-etal_year-letter_journal` (e.g., `human-etal_2020-b_nature`)
+<sup>1 </sup> Department of Environmental Science, Baylor University, Waco, TX USA 76798
+<sup>2 </sup> Pacific Northwest National Laboratory, Richland, WA USA
+<sup>3 </sup> Department of Forest and Wildlife Ecology, University of Wisconsin Madison, Madison WI USA 53706
 
-## Customize your `.gitignore` file
-A general `.gitignore` for use with Python or R development is included.  However, you may wish to customize this to the needs of your project.  The `.gitignore` file lets Git know what to push to the remote repository and what needs to be ignored and stay local.
+\* corresponding author:  Ryan_McManamay@baylor.edu
 
-## Suggestions
-- Don't bog down your repository with a bunch of raw data.  Instead archive and mint a DOI for your data and provide the reference in this repository with instructions for use.
-- Create complete and tested documentation for how to use what is in this repository to reproduce your experiment.
+## Abstract
+Human-Earth System Models and Integrated Assessment Models used to explore the land-atmosphere implications of future land-use transitions generally lack dynamic representation of urban lands. Here, we conduct an experiment incorporating dynamic urbanization in a multisector model framework. We integrate projected dynamic non-urban lands from a multisector model with projected dynamic urban lands from 2015 to 2100 at 1-km resolution to examine 1st-order implications to the land system, crop production, and net primary production, that can arise from the competition over land resources. By 2100, future urban extensification could displace 0.1 to 1.4 million km2 of agriculture lands, leading to 22 to 310 Mt of compromised corn, rice, soybean, and wheat production. When considering increased corn production required to meet demands by 2100, urban extensification could cut increases in yields by half. Losses in net primary production from displaced forest, grassland, and croplands ranged from 0.24 to 2.24 Gt C yr-1, potentially increasing land emissions by 1.19 to 6.59 Gt CO2 yr-1. Although these estimates do not consider adaptive responses, 1st-order experiments can elucidate the individual role of sub-sectors that would otherwise be masked by model complexity.
 
-## Creating a minted release for your meta-repository
-It is important to version and release your meta-repository as well due to changes that may occur during the publication review process.  If you do not know how to conduct a release on GitHub when linked with Zenodo, please contact chris.vernon@pnnl.gov to get set up.  
+## Journal reference
+McManamay, R.A., Vernon, C.R., Chen, M., Thompson, I., Khan, Z., Narayan, K.B. (in review). Dynamic urban land 1 extensification is projected to lead to imbalances in the global land-carbon equilibrium. Commun Earth Environ.
 
-## The meta-repository markdown template
-A sample meta-repository template is provided in this repository in the file `metarepo_template.md`.  
+## Code reference
+References for each minted software release for all code involved.  
 
-To use it, do the following:
-1. Create the template repository as mentioned above in [Using the template](#using-the-template)
-2. Clone your new repository to you local machine
-3. Change directories into your new meta-repository directory you just cloned
-4. Run `git rm README.md` to delete this file (`README.md`) and commit it using `git commit -m 'remove instructions'`
-5. Rename `metarepo_template.md` as `README.md`
-6. Run `git add README.md` to stage the new file that will show up on load in your remote GitHub repository
-7. Run `git rm metarepo_template.md` to remove the original template
-8. Run `git commit -m 'set up new template as readme'` to set the changes
-9. Run `git push` to send the changes to your remote GitHub repository
-10. Modify the `README.md` file to represent your experiement and use the `add`, `commit`, `push` workflow to update your remote repository
+These are generated by Zenodo automatically when conducting a release when Zenodo has been linked to your GitHub repository. The Zenodo references are built by setting the author order in order of contribution to the code using the author's GitHub user name.  This citation can, and likely should, be edited without altering the DOI.
+
+If you have modified a codebase that is outside of a formal release, and the modifications are not planned on being merged back into a version, fork the parent repository and add a `.<shortname>` to the version number of the parent and construct your own name.  For example, `v1.2.5.hydro`.
+
+Human, I.M. (2021, April 14). Project/repo:v0.1.0 (Version v0.1.0). Zenodo. http://doi.org/some-doi-number/zenodo.7777777
+
+## Data reference
+
+### Input data
+Reference for each minted data source for your input data.  For example:
+
+Human, I.M. (2021). My input dataset name [Data set]. DataHub. https://doi.org/some-doi-number
+
+### Output data
+Reference for each minted data source for your output data.  For example:
+
+Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/some-doi-number
+
+## Contributing modeling software
+| Model | Version | Repository Link | DOI |
+|-------|---------|-----------------|-----|
+| model 1 | version | link to code repository | link to DOI dataset |
+| model 2 | version | link to code repository | link to DOI dataset |
+| component 1 | version | link to code repository | link to DOI dataset |
+
+## Reproduce my experiment
+Fill in detailed info here or link to other documentation that is a thorough walkthrough of how to use what is in this repository to reproduce your experiment.
+
+
+1. Install the software components required to conduct the experiement from [Contributing modeling software](#contributing-modeling-software)
+2. Download and install the supporting input data required to conduct the experiement from [Input data](#input-data)
+3. Run the following scripts in the `workflow` directory to re-create this experiment:
+
+| Script Name | Description | How to Run |
+| --- | --- | --- |
+| `step_one.py` | Script to run the first part of my experiment | `python3 step_one.py -f /path/to/inputdata/file_one.csv` |
+| `step_two.py` | Script to run the last part of my experiment | `python3 step_two.py -o /path/to/my/outputdir` |
+
+4. Download and unzip the output data from my experiment [Output data](#output-data)
+5. Run the following scripts in the `workflow` directory to compare my outputs to those from the publication
+
+| Script Name | Description | How to Run |
+| --- | --- | --- |
+| `compare.py` | Script to compare my outputs to the original | `python3 compare.py --orig /path/to/original/data.csv --new /path/to/new/data.csv` |
+
+## Reproduce my figures
+Use the scripts found in the `figures` directory to reproduce the figures used in this publication.
+
+| Script Name | Description | How to Run |
+| --- | --- | --- |
+| `generate_figures.py` | Script to generate my figures | `python3 generate_figures.py -i /path/to/inputs -o /path/to/outuptdir` |
