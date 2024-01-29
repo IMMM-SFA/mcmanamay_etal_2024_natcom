@@ -44,7 +44,6 @@ McManamay, R. (2023). <dataset name> https://doi.org/10.57931/2228907
 | Model | Version | Repository Link | DOI |
 |-------|---------|-----------------|-----|
 | Global Change Analysis Model (GCAM) | v5.0? | https://github.com/JGCRI/gcam-core | https://zenodo.org/records/8010145 |
-<!-- TODO: double check GCAM version -->
 | Demeter | v? | https://github.com/jgcri/demeter | https://zenodo.org/records/8277176 |
 | Community Earth System Model 2 (CESM2) | v2? | https://github.com/ESCOMP/CESM | doi? | 
 | Spatially Explicit, Long-term, Empirical City development (SELECT) | v? | code? | doi? |
