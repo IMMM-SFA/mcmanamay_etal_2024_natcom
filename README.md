@@ -30,21 +30,25 @@ Human, I.M. (2021, April 14). Project/repo:v0.1.0 (Version v0.1.0). Zenodo. http
 ## Data reference
 
 ### Input data
-Reference for each minted data source for your input data.  For example:
+Reference for each minted data source for your input data.
+Gao, J. (2021). "Global 1-km Downscaled Urban Land Fraction Grids, SSP-Consistent Projections and Base Year, v1 (2000 - 2100)". https://doi.org/10.7910/DVN/0EGDOK, Harvard Dataverse, V1
 
-Human, I.M. (2021). My input dataset name [Data set]. DataHub. https://doi.org/some-doi-number
+Vernon, C. (2020). "GCAM-Demeter land use dataset at 0.05-degree resolution". https://dx.doi.org/10.25584/data.2020-04.1190/1615771
 
 ### Output data
 Reference for each minted data source for your output data.  For example:
 
-Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/some-doi-number
+McManamay, R. (2023). <dataset name> https://doi.org/10.57931/2228907
 
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
 |-------|---------|-----------------|-----|
-| model 1 | version | link to code repository | link to DOI dataset |
-| model 2 | version | link to code repository | link to DOI dataset |
-| component 1 | version | link to code repository | link to DOI dataset |
+| Global Change Analysis Model (GCAM) | v5.0? | https://github.com/JGCRI/gcam-core | https://zenodo.org/records/8010145 |
+<!-- TODO: double check GCAM version -->
+| Demeter | v? | https://github.com/jgcri/demeter | https://zenodo.org/records/8277176 |
+| Community Earth System Model 2 (CESM2) | v2? | https://github.com/ESCOMP/CESM | doi? | 
+| Spatially Explicit, Long-term, Empirical City development (SELECT) | v? | code? | doi? |
+
 
 ## Reproduce my experiment
 Fill in detailed info here or link to other documentation that is a thorough walkthrough of how to use what is in this repository to reproduce your experiment.
