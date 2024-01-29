@@ -2,7 +2,7 @@ _your zenodo badge here_
 
 # mcmanamay_etal_2024_natcom
 
-**Dynamic urban land 1 extensification is projected to lead to imbalances in the global land-carbon equilibrium**
+**Dynamic urban land extensification is projected to lead to imbalances in the global land-carbon equilibrium**
 
 Ryan A. McManamay<sup>1\*</sup>, Chris R. Vernon<sup>2</sup>, Min Chen<sup>3</sup>, Isaac Thompson<sup>2</sup>, Zarrar Khan<sup>2</sup>, Kanishka B. Narayan<sup>2</sup>
 
