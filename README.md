@@ -2,6 +2,8 @@ _your zenodo badge here_
 
 # mcmanamay_etal_2024_natcom
 
+Note: this metarepo is in progress.
+
 **Dynamic urban land extensification is projected to lead to imbalances in the global land-carbon equilibrium**
 
 Ryan A. McManamay<sup>1\*</sup>, Chris R. Vernon<sup>2</sup>, Min Chen<sup>3</sup>, Isaac Thompson<sup>2</sup>, Zarrar Khan<sup>2</sup>, Kanishka B. Narayan<sup>2</sup>
@@ -32,21 +34,22 @@ Human, I.M. (2021, April 14). Project/repo:v0.1.0 (Version v0.1.0). Zenodo. http
 ### Input data
 Reference for each minted data source for your input data.
 Gao, J. (2021). "Global 1-km Downscaled Urban Land Fraction Grids, SSP-Consistent Projections and Base Year, v1 (2000 - 2100)". https://doi.org/10.7910/DVN/0EGDOK, Harvard Dataverse, V1
+Chen, M. and C.R. Vernon (2020). GCAM-Demeter-LU [Data set]. DataHub. https://doi.org/10.25584/data.2020-04.1188/1614678
+Monfreda, C., N. Ramankutty, and J. A. Foley (2008), Farming the planet: 2. Geographic distribution of crop areas, yields, physiological types, and net primary production in the year 2000, Global Biogeochem. Cycles, 22, GB1022, doi: 10.1029/2007GB002947.
+Running, S., Mu, Q. & Zhao, M. MOD17A3H MODIS/Terra Net Primary Production Yearly L4 Global 500m SIN Grid V006 [data set]. NASA EOSDIS Land Processes DAAC. Accessed 2022-12-13. https://doi.org/10.5067/MODIS/MOD17A3H.006
 
-Vernon, C. (2020). "GCAM-Demeter land use dataset at 0.05-degree resolution". https://dx.doi.org/10.25584/data.2020-04.1190/1615771
 
 ### Output data
-Reference for each minted data source for your output data.  For example:
-
-McManamay, R. (2023). <dataset name> https://doi.org/10.57931/2228907
+McManamay, R. (2023). Dynamic integration of GCAM-Demeter and CLUBS-Select: Datasets on urban extensification effects on land cover, crop yields, net primary production, and CO2 emissions. https://doi.org/10.57931/2228907
 
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
 |-------|---------|-----------------|-----|
-| Global Change Analysis Model (GCAM) | v5.0? | https://github.com/JGCRI/gcam-core | https://zenodo.org/records/8010145 |
-| Demeter | v? | https://github.com/jgcri/demeter | https://zenodo.org/records/8277176 |
+| Global Change Analysis Model (GCAM) | v4.3 | https://github.com/JGCRI/gcam-core/tree/gcam-v4.3 | https://zenodo.org/records/3713432 |
+| Demeter | v1.chen	| https://github.com/crvernon/demeter/tree/v1.chen | http://doi.org/10.5281/zenodo.3713378 |
 | Community Earth System Model 2 (CESM2) | v2? | https://github.com/ESCOMP/CESM | doi? | 
-| Spatially Explicit, Long-term, Empirical City development (SELECT) | v? | code? | doi? |
+| Spatially Explicit, Long-term, Empirical City development (SELECT) | v1.0.0 | https://github.com/IMMM-SFA/select | https://zenodo.org/records/7083152 |
+| Moirai land data system | v3.0.1 | https://github.com/JGCRI/moirai/tree/3.0.1 | https://zenodo.org/records/3370875 |
 
 
 ## Reproduce my experiment
@@ -75,3 +78,61 @@ Use the scripts found in the `figures` directory to reproduce the figures used i
 | Script Name | Description | How to Run |
 | --- | --- | --- |
 | `generate_figures.py` | Script to generate my figures | `python3 generate_figures.py -i /path/to/inputs -o /path/to/outuptdir` |
+
+1. Install the software components required to conduct the experiement from [Contributing modeling software](#contributing-modeling-software)
+
+2. Download and install the supporting input data required to conduct the experiement from [Input data](#input-data)
+
+### Integrating GCAM-Demeter with SELECT
+
+3. Interpolate 5 year time-steps between decadal time-steps of SELECT to match the temporal resolution of Demeter simulations.
+
+4. Calculate $`\delta Uf`$, the change in urban fraction, for each grid cell, $`i`$, where $`s`$ is the SELECT land cover fraction and $`d`$ is the Demeter land cover fraction as a whole number percentage (integer).
+
+$$\delta Uf_i = s_i - \frac{d_i}{100}$$
+
+5. Calculate $`R`$, the remaining cumulative fraction of all non-urban lands, for each grid cell, $`i`$.
+
+$$ T_i = 100 - d_i$$
+
+6. Calculate $`\overline{LF}`$, a fraction adjusted to accommodate urban land expansion or contraction, for each non-urban Demeter land type $`k`$.
+
+$$ \overline{LF_{ki}} = \frac{LF_{ki}}{100} - (\frac{LF_{ki}}{T_i}\times \delta Uf_i) $$
+
+7. Calculate $`LA`$, the non-urban land area compromised or expanded for each land type through urban land expansion or contraction, respectively. $`A`$ is the total area of the $`i`$th grid cell in square kilometers. 
+
+$$ \delta LA_{ki} = \frac{LF_{ki}}{T_i} \times \delta Uf_i \times A_i \times -1 $$
+
+8. Group $`\delta LA_{ki}`$ into 13 functional land types within three major categories: forest, grassland, and agriculture (including bioenergy). For each of the 2700 scenarios, $`\delta LA_{ki}`$ and grouped $`\delta LA_{ki}`$ values were summarized across the regions and basins, and their unique combinations, depicted by the Moirai land system used within GCAM.
+
+9. Construct linear models for global results where $`\delta LA_{ki}`$ within basins were a function of region, SSP, RCP, GCM, year, and source, an indicator of harmonized or unharmonized land allocation (n = 517,007 observations). 
+
+10. Construct linear models for within-region variability in the US to explore the importance of all other variables besides region. Use Analysis of Variance (ANOVA) to explore sources of variation explained by each variable.
+
+### Effects of dynamic urbanization on crop yields
+
+11. Use the Monfreda dataset to calculate $`\delta Y_{krb}`$, total lost or gained yield. $`b`$ is the basin combinations; $`\overline{y}`$ is the region- and basin-specific averages of crop yield rate for corn, cotton, wheat, rice, soybean, sugar crops, and wheat; and $`\delta LA_{krb}`$ is non-urban land area grouped by compatible functional types ($`k`$) and summed for region ($`r`$) and basin ($`b`$) combinations.
+
+$$ \delta Y_{krb} = \delta LA_{krb} \times \overline{y}_{krb} $$
+
+### Effects of dynamic urbanization on net primary productivity
+
+12. Use the Running dataset to obtain annual MODIS net primary productivity (NPP), measured in $`gCm^{−2} y^{−1}`$ in 500-m gridded datasets for 2010 to 2015. Average annual values into 5-yr values and then aggregate to 0.05° grid cells to match the GCAM-Demeter resolution. 
+
+13. Create a data frame of unique $`LF_{ki}`$ values and NPP values for each grid cell observation. For each of the $`k`$ land types, the data frame was filtered to only consider $`LF_{ki}`$ grid values $`>=10%`$, and then those subsets of NPP values were summarized as minima, maxima, and averages within each region-basin as indicative of the range of primary production for a given land class in that area. $`n`$ is the number of grid cells corresponding to the $`k`$th land-class type in each region ($`r`$) and basin ($`b`$) combination. 
+
+$$ \forall i, k, r, b | LF_{kirb} \geq 0.1 \to NPP_{kirb} $$
+$$ min(NPP_{krb}) = ^{min}_{i}{NPP_i}^n_{i=1} $$
+$$ max(NPP_{krb}) = ^{max}_{i}{NPP_i}^n_{i=1} $$
+## \overline{NPP_{krb}} = \frac{\sum^n_{i=1}NPP_i}{n}
+
+Convert NPP values from $`gCm^{−2} y^{−1}`$ to $`GtCkm^{−2} y^{−r}`$.
+
+14. Calculate $`\delta NPP`$, total NPP losses or gains associated with urban land changes.
+
+$$ min(\delta NPP_{krb}) = \delta LA_{krb} \times min(NPP_{krb}) $$
+$$ max(\delta NPP_{krb}) = \delta LA_{krb} \times max(NPP_{krb}) $$
+$$ \overline{\delta NPP_{krb}} = \delta LA_{krb} \times \overline{NPP_{krb}} $$
+
+### First-order implications of urban dynamism on GCAM land-carbon equilibria
+
