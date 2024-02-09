@@ -87,9 +87,9 @@ Use the scripts found in the `figures` directory to reproduce the figures used i
 
 3. Interpolate 5 year time-steps between decadal time-steps of SELECT to match the temporal resolution of Demeter simulations.
 
-4. Calculate $`\delta Uf`$, the change in urban fraction, for each grid cell, $`i`$, where $`s`$ is the SELECT land cover fraction and $`d`$ is the Demeter land cover fraction as a whole number percentage (integer).
+4. Calculate $`\Delta Uf`$, the change in urban fraction, for each grid cell, $`i`$, where $`s`$ is the SELECT land cover fraction and $`d`$ is the Demeter land cover fraction as a whole number percentage (integer).
 
-$$\delta Uf_i = s_i - \frac{d_i}{100}$$
+$$\Delta Uf_i = s_i - \frac{d_i}{100}$$
 
 5. Calculate $`R`$, the remaining cumulative fraction of all non-urban lands, for each grid cell, $`i`$.
 
@@ -97,23 +97,23 @@ $$ T_i = 100 - d_i$$
 
 6. Calculate $`\overline{LF}`$, a fraction adjusted to accommodate urban land expansion or contraction, for each non-urban Demeter land type $`k`$.
 
-$$ \overline{LF_{ki}} = \frac{LF_{ki}}{100} - (\frac{LF_{ki}}{T_i}\times \delta Uf_i) $$
+$$ \overline{LF_{ki}} = \frac{LF_{ki}}{100} - (\frac{LF_{ki}}{T_i}\times \Delta Uf_i) $$
 
 7. Calculate $`LA`$, the non-urban land area compromised or expanded for each land type through urban land expansion or contraction, respectively. $`A`$ is the total area of the $`i`$th grid cell in square kilometers. 
 
-$$ \delta LA_{ki} = \frac{LF_{ki}}{T_i} \times \delta Uf_i \times A_i \times -1 $$
+$$ \Delta LA_{ki} = \frac{LF_{ki}}{T_i} \times \Delta Uf_i \times A_i \times -1 $$
 
-8. Group $`\delta LA_{ki}`$ into 13 functional land types within three major categories: forest, grassland, and agriculture (including bioenergy). For each of the 2700 scenarios, $`\delta LA_{ki}`$ and grouped $`\delta LA_{ki}`$ values were summarized across the regions and basins, and their unique combinations, depicted by the Moirai land system used within GCAM.
+8. Group $`\Delta LA_{ki}`$ into 13 functional land types within three major categories: forest, grassland, and agriculture (including bioenergy). For each of the 2700 scenarios, $`\Delta LA_{ki}`$ and grouped $`\Delta LA_{ki}`$ values were summarized across the regions and basins, and their unique combinations, depicted by the Moirai land system used within GCAM.
 
-9. Construct linear models for global results where $`\delta LA_{ki}`$ within basins were a function of region, SSP, RCP, GCM, year, and source, an indicator of harmonized or unharmonized land allocation (n = 517,007 observations). 
+9. Construct linear models for global results where $`\Delta LA_{ki}`$ within basins were a function of region, SSP, RCP, GCM, year, and source, an indicator of harmonized or unharmonized land allocation (n = 517,007 observations). 
 
 10. Construct linear models for within-region variability in the US to explore the importance of all other variables besides region. Use Analysis of Variance (ANOVA) to explore sources of variation explained by each variable.
 
 ### Effects of dynamic urbanization on crop yields
 
-11. Use the Monfreda dataset to calculate $`\delta Y_{krb}`$, total lost or gained yield. $`b`$ is the basin combinations; $`\overline{y}`$ is the region- and basin-specific averages of crop yield rate for corn, cotton, wheat, rice, soybean, sugar crops, and wheat; and $`\delta LA_{krb}`$ is non-urban land area grouped by compatible functional types ($`k`$) and summed for region ($`r`$) and basin ($`b`$) combinations.
+11. Use the Monfreda dataset to calculate $`\Delta Y_{krb}`$, total lost or gained yield. $`b`$ is the basin combinations; $`\overline{y}`$ is the region- and basin-specific averages of crop yield rate for corn, cotton, wheat, rice, soybean, sugar crops, and wheat; and $`\Delta LA_{krb}`$ is non-urban land area grouped by compatible functional types ($`k`$) and summed for region ($`r`$) and basin ($`b`$) combinations.
 
-$$ \delta Y_{krb} = \delta LA_{krb} \times \overline{y}_{krb} $$
+$$ \Delta Y_{krb} = \Delta LA_{krb} \times \overline{y}_{krb} $$
 
 ### Effects of dynamic urbanization on net primary productivity
 
@@ -128,11 +128,11 @@ $$ max(NPP_{krb}) = ^{max}_{i}{NPP_i}^n_{i=1} $$
 
 Convert NPP values from $`gCm^{−2} y^{−1}`$ to $`GtCkm^{−2} y^{−r}`$.
 
-14. Calculate $`\delta NPP`$, total NPP losses or gains associated with urban land changes.
+14. Calculate $`\Delta NPP`$, total NPP losses or gains associated with urban land changes.
 
-$$ min(\delta NPP_{krb}) = \delta LA_{krb} \times min(NPP_{krb}) $$
-$$ max(\delta NPP_{krb}) = \delta LA_{krb} \times max(NPP_{krb}) $$
-$$ \overline{\delta NPP_{krb}} = \delta LA_{krb} \times \overline{NPP_{krb}} $$
+$$ min(\Delta NPP_{krb}) = \Delta LA_{krb} \times min(NPP_{krb}) $$
+$$ max(\Delta NPP_{krb}) = \Delta LA_{krb} \times max(NPP_{krb}) $$
+$$ \overline{\Delta NPP_{krb}} = \Delta LA_{krb} \times \overline{NPP_{krb}} $$
 
 ### First-order implications of urban dynamism on GCAM land-carbon equilibria
 
