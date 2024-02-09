@@ -119,19 +119,24 @@ $$ \Delta Y_{krb} = \Delta LA_{krb} \times \overline{y}_{krb} $$
 
 12. Use the Running dataset to obtain annual MODIS net primary productivity (NPP), measured in $`gCm^{−2} y^{−1}`$ in 500-m gridded datasets for 2010 to 2015. Average annual values into 5-yr values and then aggregate to 0.05° grid cells to match the GCAM-Demeter resolution. 
 
-13. Create a data frame of unique $`LF_{ki}`$ values and NPP values for each grid cell observation. For each of the $`k`$ land types, the data frame was filtered to only consider $`LF_{ki}`$ grid values $`>=10%`$, and then those subsets of NPP values were summarized as minima, maxima, and averages within each region-basin as indicative of the range of primary production for a given land class in that area. $`n`$ is the number of grid cells corresponding to the $`k`$th land-class type in each region ($`r`$) and basin ($`b`$) combination. 
+13. Create a data frame of unique $`LF_{ki}`$ values and NPP values for each grid cell observation. For each of the $`k`$ land types, the data frame was filtered to only consider $`LF_{ki}`$ grid values $`\geq 10\%`$, and then those subsets of NPP values were summarized as minima, maxima, and averages within each region-basin as indicative of the range of primary production for a given land class in that area. $`n`$ is the number of grid cells corresponding to the $`k`$th land-class type in each region ($`r`$) and basin ($`b`$) combination. 
 
 $$ \forall i, k, r, b | LF_{kirb} \geq 0.1 \to NPP_{kirb} $$
+
 $$ min(NPP_{krb}) = ^{min}_{i}{NPP_i}^n_{i=1} $$
+
 $$ max(NPP_{krb}) = ^{max}_{i}{NPP_i}^n_{i=1} $$
-## \overline{NPP_{krb}} = \frac{\sum^n_{i=1}NPP_i}{n}
+
+$$ \overline{NPP_{krb}} = \frac{\sum^n_{i=1}NPP_i}{n} $$
 
 Convert NPP values from $`gCm^{−2} y^{−1}`$ to $`GtCkm^{−2} y^{−1}`$.
 
 14. Calculate $`\Delta NPP`$, total NPP losses or gains associated with urban land changes.
 
 $$ min(\Delta NPP_{krb}) = \Delta LA_{krb} \times min(NPP_{krb}) $$
+
 $$ max(\Delta NPP_{krb}) = \Delta LA_{krb} \times max(NPP_{krb}) $$
+
 $$ \overline{\Delta NPP_{krb}} = \Delta LA_{krb} \times \overline{NPP_{krb}} $$
 
 ### First-order implications of urban dynamism on GCAM land-carbon equilibria
