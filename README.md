@@ -129,9 +129,9 @@ $$ = ^{min}_{i}\\{NPP_i\\}^n_{i=1} $$
 
 $$ = _{i} \\{NPP_i\\}^n_{i=1} $$
 
-$$ = ^{min}_{i} NPP $$
+$$ \min(NPP_{krb}) = ^{min}_{i} NPP $$
 
-$$ \\{NPP_i\\}^n_{i=1} $$
+<!-- $$ \\{NPP_i\\}^n_{i=1} $$ -->
 
 <!-- $$ \min(NPP_{krb}) ={min}\atop {i} \{ NPP_i \} ^n_{i=1} $$ -->
 
