@@ -125,11 +125,13 @@ $$ \forall i, k, r, b | LF_{kirb} \geq 0.1 \to NPP_{kirb} $$
 
 $$ \min(NPP_{krb}) =^{min}_{i}\{NPP_i\}^n_{i=1} $$
 
-$$ \min(NPP_{krb}) =(NPP_i)^n_{i=1} $$
+$$ \min(NPP_{krb}) ={min}\atop {i} \{NPP_i\}^n_{i=1} $$
 
 $$ \begin{array}{c}\min \\ i\end{array} $$
 
-$$ max(NPP_{krb}) =^{max}_{i}\{NPP_i\}^n_{i=1} $$
+$$ X\atop Y $$
+
+$$ \max(NPP_{krb}) =^{max}_{i}\{NPP_i\}^n_{i=1} $$
 
 $$ \overline{NPP_{krb}} = \frac{\sum_{i=1}^n NPP_i}{n} $$
 
