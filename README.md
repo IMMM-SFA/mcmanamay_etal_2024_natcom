@@ -127,7 +127,7 @@ $$ \min(NPP_{krb}) =^{min}_{i}\{NPP_i\}^n_{i=1} $$
 
 $$ =^{min}_{i}\{NPP_i\}^n_{i=1} $$
 
-$$ \{NPP_i\}^n_{i=1} $$
+$$ \\{NPP_i\\}^n_{i=1} $$
 
 <!-- $$ \min(NPP_{krb}) ={min}\atop {i} \{ NPP_i \} ^n_{i=1} $$ -->
 
