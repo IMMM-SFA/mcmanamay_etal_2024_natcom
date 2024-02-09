@@ -125,6 +125,8 @@ $$ \forall i, k, r, b | LF_{kirb} \geq 0.1 \to NPP_{kirb} $$
 
 $$ min(NPP_{krb}) =^{min}_{i}\{NPP_i\}^n_{i=1} $$
 
+$$ \min \left({{NPP}}_{{krb}}\right)=\begin{array}{c}\min \\ i\end{array}{\left\{{{NPP}}_{i}\right\}}_{i=1}^{n} $$
+
 $$ max(NPP_{krb}) =^{max}_{i}\{NPP_i\}^n_{i=1} $$
 
 $$ \overline{NPP_{krb}} = \frac{\sum^n_{i=1}NPP_i}{n} $$
