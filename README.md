@@ -133,9 +133,9 @@ Convert NPP values from $`gCm^{−2} y^{−1}`$ to $`GtCkm^{−2} y^{−1}`$
 
 14. Calculate $`\Delta NPP`$, total NPP losses or gains associated with urban land changes.
 
-$$ min(\Delta NPP_{krb}) = \Delta LA_{krb} \times min(NPP_{krb}) $$
+$$ \min(\Delta NPP_{krb}) = \Delta LA_{krb} \times \min(NPP_{krb}) $$
 
-$$ max(\Delta NPP_{krb}) = \Delta LA_{krb} \times max(NPP_{krb}) $$
+$$ \max(\Delta NPP_{krb}) = \Delta LA_{krb} \times \max(NPP_{krb}) $$
 
 $$ \overline{\Delta NPP_{krb}} = \Delta LA_{krb} \times \overline{NPP_{krb}} $$
 
