@@ -91,7 +91,7 @@ Use the scripts found in the `figures` directory to reproduce the figures used i
 
 $$\Delta Uf_i = s_i - \frac{d_i}{100}$$
 
-5. Calculate $`R`$, the remaining cumulative fraction of all non-urban lands, for each grid cell, $`i`$.
+5. Calculate $`T`$, the remaining cumulative fraction of all non-urban lands, for each grid cell, $`i`$.
 
 $$ T_i = 100 - d_i$$
 
@@ -126,7 +126,7 @@ $$ min(NPP_{krb}) = ^{min}_{i}{NPP_i}^n_{i=1} $$
 $$ max(NPP_{krb}) = ^{max}_{i}{NPP_i}^n_{i=1} $$
 ## \overline{NPP_{krb}} = \frac{\sum^n_{i=1}NPP_i}{n}
 
-Convert NPP values from $`gCm^{−2} y^{−1}`$ to $`GtCkm^{−2} y^{−r}`$.
+Convert NPP values from $`gCm^{−2} y^{−1}`$ to $`GtCkm^{−2} y^{−1}`$.
 
 14. Calculate $`\Delta NPP`$, total NPP losses or gains associated with urban land changes.
 
