@@ -125,13 +125,9 @@ $$ \forall i, k, r, b | LF_{kirb} \geq 0.1 \to NPP_{kirb} $$
 
 $$ \min(NPP_{krb}) =^{min}_{i}\\{NPP_i\\}^n_{i=1} $$
 
-$$ = ^{min}_{i}\\{NPP_i\\}^n_{i=1} $$
+$$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} ^{n} _{i=1} $$
 
-$$ = _{i} \\{NPP_i\\}^n_{i=1} $$
-
-$$ \min(NPP_{krb}) = ^{min}_{i} NPP $$
-
-$$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} ^{n}_{i=1} $$
+$$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} ^{n} $$
 
 $$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} $$
 
