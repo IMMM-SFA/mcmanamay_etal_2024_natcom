@@ -123,9 +123,9 @@ $$ \Delta Y_{krb} = \Delta LA_{krb} \times \overline{y}_{krb} $$
 
 $$ \forall i, k, r, b | LF_{kirb} \geq 0.1 \to NPP_{kirb} $$
 
-$$ min(NPP_{krb}) =^{min}_{i}{NPP_i}^n_{i=1} $$
+$$ min(NPP_{krb}) =^{min}_{i}\{NPP_i\}^n_{i=1} $$
 
-$$ max(NPP_{krb}) =^{max}_{i}{NPP_i}^n_{i=1} $$
+$$ max(NPP_{krb}) =^{max}_{i}\{NPP_i\}^n_{i=1} $$
 
 $$ \overline{NPP_{krb}} = \frac{\sum^n_{i=1}NPP_i}{n} $$
 
