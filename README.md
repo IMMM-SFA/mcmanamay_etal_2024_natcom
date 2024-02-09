@@ -123,23 +123,9 @@ $$ \Delta Y_{krb} = \Delta LA_{krb} \times \overline{y}_{krb} $$
 
 $$ \forall i, k, r, b | LF_{kirb} \geq 0.1 \to NPP_{kirb} $$
 
-$$ \min(NPP_{krb}) =^{min}_{i}\\{NPP_i\\}^n_{i=1} $$
+$$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} ^n _{i=1} $$
 
-$$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} ^{n} _{i=1} $$
-
-$$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} ^{n} $$
-
-$$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} $$
-
-<!-- $$ \\{NPP_i\\}^n_{i=1} $$ -->
-
-<!-- $$ \min(NPP_{krb}) ={min}\atop {i} \{ NPP_i \} ^n_{i=1} $$ -->
-
-<!-- $$ \begin{array}{c}\min \\ i\end{array} $$ -->
-
-<!-- $$ X\atop Y $$ -->
-
-$$ \max(NPP_{krb}) =^{max}_{i}\\{NPP_i\\}^n_{i=1} $$
+$$ \max(NPP_{krb}) = ^{max}_{i} \\{ NPP_i \\} ^n _{i=1} $$
 
 $$ \overline{NPP_{krb}} = \frac{\sum_{i=1}^n NPP_i}{n} $$
 
