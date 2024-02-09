@@ -125,13 +125,13 @@ $$ \forall i, k, r, b | LF_{kirb} \geq 0.1 \to NPP_{kirb} $$
 
 $$ \min(NPP_{krb}) =^{min}_{i}\{NPP_i\}^n_{i=1} $$
 
-$$ \min(NPP_{krb}) =^{min}_{i}(NPP_i)^n_{i=1} $$
+$$ \min(NPP_{krb}) =(NPP_i)^n_{i=1} $$
 
 $$ \begin{array}{c}\min \\ i\end{array} $$
 
 $$ max(NPP_{krb}) =^{max}_{i}\{NPP_i\}^n_{i=1} $$
 
-$$ \overline{NPP_{krb}} = \frac{\sum^n_{i=1}NPP_i}{n} $$
+$$ \overline{NPP_{krb}} = \frac{\sum_{i=1}^n NPP_i}{n} $$
 
 Convert NPP values from $`gCm^{−2} y^{−1}`$ to $`GtCkm^{−2} y^{−1}`$.
 
