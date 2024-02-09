@@ -136,5 +136,5 @@ $$ \overline{\Delta NPP_{krb}} = \Delta LA_{krb} \times \overline{NPP_{krb}} $$
 
 ### First-order implications of urban dynamism on GCAM land-carbon equilibria
 
-15. Add or negate changes in crop yield ($`\Delta Y_{krb}`$) stemming from urban extensification from GCAM simulated estimates of crop yield for all scenarios and years. First, convert GCAM land CO$_2$ from Mt C to Gt C. CO$_2$ emissions and $`\Delta NPP`$ estimates were then converted from C to CO$_2$ equivalent by multiplying by 3.664 (CO2 = 44.01 g mol$^{−1}$; C = 12.011 g mol$^{−1}$). CO$_2$ equivalent values from $`\Delta NPP`$ were then added to GCAM’s estimates of CO$_2$ emissions stemming from land-use change.
+15. Add or negate changes in crop yield ($`\Delta Y_{krb}`$) stemming from urban extensification from GCAM simulated estimates of crop yield for all scenarios and years. First, convert GCAM land CO<sub>2</sub> from Mt C to Gt C. CO<sub>2</sub> emissions and $`\Delta NPP`$ estimates were then converted from C to CO<sub>2</sub> equivalent by multiplying by 3.664 (CO2 = 44.01 g mol<sup>−1</sup>; C = 12.011 g mol<sup>−1</sup>). CO<sub>2</sub> equivalent values from $`\Delta NPP`$ were then added to GCAM’s estimates of CO<sub>2</sub> emissions stemming from land-use change.
 
