@@ -133,6 +133,8 @@ $$ \min(NPP_{krb}) = ^{min}_{i} NPP $$
 
 $$ \min(NPP_{krb}) = ^{min}_{i} \\{NPP_i \\} ^{n}_{i=1} $$
 
+$$ \min(NPP_{krb}) = ^{min}_{i} \\{ NPP_i \\} $$
+
 <!-- $$ \\{NPP_i\\}^n_{i=1} $$ -->
 
 <!-- $$ \min(NPP_{krb}) ={min}\atop {i} \{ NPP_i \} ^n_{i=1} $$ -->
