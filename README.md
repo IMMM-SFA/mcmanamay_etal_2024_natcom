@@ -1,8 +1,8 @@
 _your zenodo badge here_
 
-# mcmanamay_etal_2024_natcom
-
 Note: this metarepo is in progress.
+
+# mcmanamay_etal_2024_natcom
 
 **Dynamic urban land extensification is projected to lead to imbalances in the global land-carbon equilibrium**
 
@@ -18,7 +18,7 @@ Ryan A. McManamay<sup>1\*</sup>, Chris R. Vernon<sup>2</sup>, Min Chen<sup>3</su
 Human-Earth System Models and Integrated Assessment Models used to explore the land-atmosphere implications of future land-use transitions generally lack dynamic representation of urban lands. Here, we conduct an experiment incorporating dynamic urbanization in a multisector model framework. We integrate projected dynamic non-urban lands from a multisector model with projected dynamic urban lands from 2015 to 2100 at 1-km resolution to examine 1st-order implications to the land system, crop production, and net primary production, that can arise from the competition over land resources. By 2100, future urban extensification could displace 0.1 to 1.4 million km2 of agriculture lands, leading to 22 to 310 Mt of compromised corn, rice, soybean, and wheat production. When considering increased corn production required to meet demands by 2100, urban extensification could cut increases in yields by half. Losses in net primary production from displaced forest, grassland, and croplands ranged from 0.24 to 2.24 Gt C yr-1, potentially increasing land emissions by 1.19 to 6.59 Gt CO2 yr-1. Although these estimates do not consider adaptive responses, 1st-order experiments can elucidate the individual role of sub-sectors that would otherwise be masked by model complexity.
 
 ## Journal reference
-McManamay, R.A., Vernon, C.R., Chen, M., Thompson, I., Khan, Z., Narayan, K.B. (in review). Dynamic urban land 1 extensification is projected to lead to imbalances in the global land-carbon equilibrium. Commun Earth Environ.
+McManamay, R.A., Vernon, C.R., Chen, M. et al. Dynamic urban land extensification is projected to lead to imbalances in the global land-carbon equilibrium. Commun Earth Environ 5, 70 (2024). https://doi.org/10.1038/s43247-024-01231-y
 
 ## Code reference
 References for each minted software release for all code involved.  
