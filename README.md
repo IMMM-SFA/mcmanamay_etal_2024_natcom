@@ -107,7 +107,7 @@ $$ \Delta Y_{krb} = \Delta LA_{krb} \times \overline{y}_{krb} $$
 
 ### Effects of dynamic urbanization on net primary productivity
 
-12. Use the Running dataset to obtain annual MODIS net primary productivity (NPP), measured in $`\frac{g}{Cm^2 y^1}`$ in 500-m gridded datasets for 2010 to 2015. Average annual values into 5-yr values and then aggregate to 0.05° grid cells to match the GCAM-Demeter resolution. 
+12. Use the Running dataset to obtain annual MODIS net primary productivity (NPP), measured in $`\frac{g}{Cm^2 y}`$ in 500-m gridded datasets for 2010 to 2015. Average annual values into 5-yr values and then aggregate to 0.05° grid cells to match the GCAM-Demeter resolution. 
 
 13. Create a data frame of unique $`LF_{ki}`$ values and NPP values for each grid cell observation. For each of the $`k`$ land types, the data frame was filtered to only consider $`LF_{ki}`$ grid values $`\geq 10\%`$, and then those subsets of NPP values were summarized as minima, maxima, and averages within each region-basin as indicative of the range of primary production for a given land class in that area. $`n`$ is the number of grid cells corresponding to the $`k`$th land-class type in each region ($`r`$) and basin ($`b`$) combination. 
 
@@ -119,7 +119,7 @@ $$ \max(NPP_{krb}) = ^{max}_{i} \\{ NPP_i \\} ^n _{i=1} $$
 
 $$ \overline{NPP_{krb}} = \frac{\sum_{i=1}^n NPP_i}{n} $$
 
-Convert NPP values from $`\frac{g}{Cm^2 y^1}`$ to $`\frac{GtC}{km^2 y^1}`$.
+Convert NPP values from $`\frac{g}{Cm^2 y}`$ to $`\frac{GtC}{km^2 y}`$.
 
 14. Calculate $`\Delta NPP`$, total NPP losses or gains associated with urban land changes.
 
