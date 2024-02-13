@@ -46,7 +46,6 @@ Human, I.M. (2021, April 14). Project/repo:v0.1.0 (Version v0.1.0). Zenodo. http
 |-------|---------|-----------------|-----|
 | Global Change Analysis Model (GCAM) | v4.3 | https://github.com/JGCRI/gcam-core/tree/gcam-v4.3 | https://zenodo.org/records/3713432 |
 | Demeter | v1.chen	| https://github.com/crvernon/demeter/tree/v1.chen | http://doi.org/10.5281/zenodo.3713378 |
-| Community Earth System Model 2 (CESM2) | v2? | https://github.com/ESCOMP/CESM | doi? | 
 | Spatially Explicit, Long-term, Empirical City development (SELECT) | v1.0.0 | https://github.com/IMMM-SFA/select | https://zenodo.org/records/7083152 |
 | Moirai land data system | v3.0.1 | https://github.com/JGCRI/moirai/tree/3.0.1 | https://zenodo.org/records/3370875 |
 
@@ -69,9 +68,9 @@ Use the scripts found in the `figures` directory to reproduce the figures used i
 
 ## Reproduce my experiment
 
-1. Install the software components required to conduct the experiement from [Contributing modeling software](#contributing-modeling-software)
+1. Install the software components required to conduct the experiment from [Contributing modeling software](#contributing-modeling-software)
 
-2. Download and install the supporting input data required to conduct the experiement from [Input data](#input-data)
+2. Download and install the supporting input data required to conduct the experiment from [Input data](#input-data)
 
 ### Integrating GCAM-Demeter with SELECT
 
