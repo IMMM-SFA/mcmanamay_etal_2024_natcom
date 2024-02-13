@@ -133,4 +133,4 @@ $$ \overline{\Delta NPP_{krb}} = \Delta LA_{krb} \times \overline{NPP_{krb}} $$
 
 15. Add or negate changes in crop yield ($`\Delta Y_{krb}`$) stemming from urban extensification from GCAM simulated estimates of crop yield for all scenarios and years. First, convert GCAM land CO<sub>2</sub> from Mt C to Gt C. CO<sub>2</sub> emissions and $`\Delta NPP`$ estimates were then converted from C to CO<sub>2</sub> equivalent by multiplying by 3.664 (CO2 = 44.01 g mol<sup>−1</sup>; C = 12.011 g mol<sup>−1</sup>). CO<sub>2</sub> equivalent values from $`\Delta NPP`$ were then added to GCAM’s estimates of CO<sub>2</sub> emissions stemming from land-use change.
 
-4. Double check that you got the same output by downloading and unzipping the output data from my experiment [Output data](#output-data).
+4. Double check that you got the same output by downloading and unzipping the output data from the experiment [Output data](#output-data).
