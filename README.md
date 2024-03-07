@@ -55,8 +55,8 @@ TODO: add how to run scripts in the `workflow` directory to re-create this exper
 
 | Script Name | Description | How to Run |
 | --- | --- | --- |
-| `step_one.py` | Script to run the first part of my experiment | `python3 step_one.py -f /path/to/inputdata/file_one.csv` |
-| `step_two.py` | Script to run the last part of my experiment | `python3 step_two.py -o /path/to/my/outputdir` |
+| `SELECT-GCAM-DEMETER_integration_landchange.R` | Script to integrate SELECT with GCAM-Demeter land data | `R-4.2.1 SELECT-GCAM-DEMETER_integration_landchange.R` |
+| `Combine_ouptut_Rcode_GH.R` | Script to combine | `python3 step_two.py -o /path/to/my/outputdir` |
 
 TODO: add how to reproduce the figures
 
