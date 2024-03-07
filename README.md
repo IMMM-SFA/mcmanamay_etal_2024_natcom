@@ -40,6 +40,7 @@ Human, I.M. (2021, April 14). Project/repo:v0.1.0 (Version v0.1.0). Zenodo. http
 
 ### Output data
 * McManamay, R. (2023). Dynamic integration of GCAM-Demeter and CLUBS-Select: Datasets on urban extensification effects on land cover, crop yields, net primary production, and CO2 emissions. https://doi.org/10.57931/2228907
+* McManamay, R., Vernon, C., Chen, M., Thompson, I., Khan, Z., & Narayan, K. (2023). Dynamic integration of GCAM-Demeter and CLUBS-Select: Datasets on urban extensification effects on land cover, crop yields, net primary production, and CO2 emissions (Version v1) [Data set]. MSD-LIVE Data Repository. https://doi.org/10.57931/2228907
 
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
