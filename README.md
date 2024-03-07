@@ -77,7 +77,7 @@ Use the scripts found in the `figures` directory to reproduce the figures used i
 1. Install the software components required to conduct the experiment from [Contributing modeling software](#contributing-modeling-software)
 
 2. Download and install the supporting input data required to conduct the experiment from [Input data](#input-data)
-3. Download zipped folders and .csv files in workflow directory to run scripts from [Workflow directory](#https://github.com/IMMM-SFA/mcmanamay_etal_2024_natcom/tree/main/workflow). These files and folders include: Crop_summary_basin_region.csv, npp_base_files.zip, variable_list3.csv.  Also note outputs are provided for plotting and include Crop_GlobalSum.csv and NPP_Global_sums.zip.
+3. Download zipped folders and .csv files in workflow directory to run scripts from [Workflow directory](https://github.com/IMMM-SFA/mcmanamay_etal_2024_natcom/tree/main/workflow). These files and folders include: Crop_summary_basin_region.csv, npp_base_files.zip, variable_list3.csv.  Also note outputs are provided for plotting and include Crop_GlobalSum.csv and NPP_Global_sums.zip.
 
 ### Integrating GCAM-Demeter with SELECT
 
