@@ -56,7 +56,9 @@ TODO: add how to run scripts in the `workflow` directory to re-create this exper
 | Script Name | Description | How to Run |
 | --- | --- | --- |
 | `SELECT-GCAM-DEMETER_integration_landchange.R` | Script to integrate SELECT with GCAM-Demeter land data | `R-4.2.1 SELECT-GCAM-DEMETER_integration_landchange.R` |
-| `Combine_ouptut_Rcode_GH.R` | Script to combine | `python3 step_two.py -o /path/to/my/outputdir` |
+| `Combine_ouptut_Rcode_GH.R` | Script to combine all outputs generated from SELECT-GCAM-DEMETER_integration_landchange.R  | `R-4.2.1 Combine_ouptut_Rcode_GH.R` |
+| `Anova_Dynamic_Land_Change_Plots.R` | Script to summarize land changes from outputs generated from Combine_ouptut_Rcode_GH.R and conduct Analysis of Variance of sources of variation in land changes  | `R-4.2.1 Anova_Dynamic_Land_Change_Plots.R` |
+| `Crop_NPP_allocation_Rcode_GH.R` | Script to link crop yields and net primary production to land cover classes in order to estimate crop yield losses | `R-4.2.1 Crop_NPP_allocation_Rcode_GH.R` |
 
 TODO: add how to reproduce the figures
 
@@ -65,13 +67,17 @@ Use the scripts found in the `figures` directory to reproduce the figures used i
 
 | Script Name | Description | How to Run |
 | --- | --- | --- |
-| `generate_figures.py` | Script to generate my figures | `python3 generate_figures.py -i /path/to/inputs -o /path/to/outuptdir` |
+| `Plotting_Rasters_GH.R` | Script to plot urban land fraction from SELECT | `R-4.2.1 Plotting_Rasters_GH.R` |
+| `Crop_budget_plots_GH.R` | Script to plot changes in crop yields from lands compromised from urban expansion| `R-4.2.1 Crop_budget_plots_GH.R` |
+| `NPP_budget_plots_GH.R` | Script to plot changes in net primary production from lands compromised from urban expansion| `R-4.2.1 NPP_budget_plots_GH.R` |
+| `Spatial_Maps_Crop_NPP_urban_Rcode_GH.R` | Script to plot global maps of changes in crop yields and net primary production from lands compromised from urban expansion| `R-4.2.1 Spatial_Maps_Crop_NPP_urban_Rcode_GH.R` |
 
 ## Reproduce my experiment
 
 1. Install the software components required to conduct the experiment from [Contributing modeling software](#contributing-modeling-software)
 
 2. Download and install the supporting input data required to conduct the experiment from [Input data](#input-data)
+3. Download zipped folders and .csv files in workflow directory to run scripts from [Workflow directory](#workflow). These files and folders include: Crop_summary_basin_region.csv, npp_base_files.zip, variable_list3.csv.  Also note outputs are provided for plotting and include Crop_GlobalSum.csv and NPP_Global_sums.zip.
 
 ### Integrating GCAM-Demeter with SELECT
 
