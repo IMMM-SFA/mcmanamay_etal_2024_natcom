@@ -37,6 +37,7 @@ McManamay, R.A., Vernon, C.R., Chen, M. et al. Dynamic urban land extensificatio
 | Demeter | v1.chen	| https://github.com/crvernon/demeter/tree/v1.chen | http://doi.org/10.5281/zenodo.3713378 |
 | Spatially Explicit, Long-term, Empirical City development (SELECT) | v1.0.0 | https://github.com/IMMM-SFA/select | https://zenodo.org/records/7083152 |
 | Moirai land data system | v3.0.1 | https://github.com/JGCRI/moirai/tree/3.0.1 | https://zenodo.org/records/3370875 |
+| R | v4.2.1 | https://cran.r-project.org/bin/windows/base/old/4.2.1/ | |
 
 ## Reproduce my experiment
 
