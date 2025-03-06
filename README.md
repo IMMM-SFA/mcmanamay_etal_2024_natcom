@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/742064311.svg)](https://zenodo.org/doi/10.5281/zenodo.11206385)
 
-# mcmanamay_etal_2024_natcom
+# mcmanamay-etal_2024_natcom
 
 **Dynamic urban land extensification is projected to lead to imbalances in the global land-carbon equilibrium**
 
